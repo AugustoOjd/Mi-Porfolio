@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
+import {DiApple} from 'react-icons/di'
+import {SiSamsung} from 'react-icons/si'
+import {SiMotorola} from 'react-icons/si'
+import {SiXiaomi} from 'react-icons/si'
 
 
 
@@ -11,26 +15,28 @@ function App() {
   
   const marcas= [
     {
-        name: 'Apple'
+      icon: <DiApple/>,
+      name: 'Apple'
+    },
+    {   
+      icon: <SiSamsung/>,
+      name: 'Samsung'
     },
     {
-        name: 'Samsung'
+      icon: <SiMotorola/>,
+      name: 'Motorola'
     },
     {
-        name: 'Motorola'
-    },
-    {
-        name: 'Xiaomi'
+      icon: <SiXiaomi/>,
+      name: 'Xiaomi'
     },
 ]
-
-  const marca = marcas.map(m => (<ItemListContainer name={m.name}/>))
 
   return (
     <div className="container max-auto">
         <NavBar/>
         
-        <h2>{marca}</h2>
+        <div>{marcas.map(m => (<ItemListContainer name={m.name} icon={m.icon}/>))}</div>
 
 
     </div>

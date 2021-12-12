@@ -1,10 +1,6 @@
 import React from 'react'
 import DarkModeBtn from './DarkModeBtn'
 import CartWidget from './CartWidget'
-// import {DiApple} from 'react-icons/di'
-// import {SiSamsung} from 'react-icons/si'
-// import {SiMotorola} from 'react-icons/si'
-// import {SiXiaomi} from 'react-icons/si'
 
 
 
