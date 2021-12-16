@@ -36,7 +36,7 @@ function App() {
     <div className="container max-auto">
         <NavBar/>
         
-        <div>{marcas.map(m => (<ItemListContainer name={m.name} icon={m.icon}/>))}</div>
+        <div className='hidden'>{marcas.map(m => (<ItemListContainer name={m.name} icon={m.icon}/>))}</div>
 
 
     </div>
