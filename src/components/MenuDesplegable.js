@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemListContainer = ({icon,name}) => {
+const MenuDespegable = ({icon,name}) => {
 
 
     return (
@@ -17,4 +17,4 @@ const ItemListContainer = ({icon,name}) => {
     )
 }
 
-export default ItemListContainer
+export default MenuDespegable
