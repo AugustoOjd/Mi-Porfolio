@@ -13,14 +13,14 @@ const modSam = [
 ]
 
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial}) => {
 
     const [Contador, setContador] = useState(initial)
 
     const [CountStock, setCountStock] = useState(stock)
 
-    let resStock = () =>{setCountStock( CountStock == 0 ? CountStock : CountStock -1) || (setContador(CountStock > 0 ? Contador + 1 : Contador)) }
-    let sumStock = () =>{setCountStock( CountStock == stock ? CountStock : CountStock + 1) || (setContador(Contador == 1 ? Contador : Contador - 1)) }
+    let resStock = () =>{setCountStock( CountStock === 0 ? CountStock : CountStock -1) || (setContador(CountStock > 0 ? Contador + 1 : Contador)) }
+    let sumStock = () =>{setCountStock( CountStock === stock ? CountStock : CountStock + 1) || (setContador(Contador === 1 ? Contador : Contador - 1)) }
 
 
     // let sumar = () => {setContador( setCountStock(Contador + 1 ))}
