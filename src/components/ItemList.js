@@ -1,6 +1,8 @@
 import React from 'react'
 import Item from './Item'
 import { useState, useEffect } from 'react';
+import s21 from '../assets/s21.jpg'
+import zflip3 from '../assets/zflip3.jpg'
 
 
 
@@ -15,7 +17,7 @@ const ItemList = () => {
 
         {
             id: 1,
-            src: '',
+            img: s21,
             title: 'Galaxy S21',
             memoria: 128,
             ram: 8,
@@ -25,7 +27,7 @@ const ItemList = () => {
         },
         {
             id: 2,
-            src: '',
+            img: zflip3,
             title: 'Z-Flip 3',
             memoria: 128,
             ram: 8,
@@ -68,7 +70,7 @@ const ItemList = () => {
     return (
         <div className='flex'>
             
-            { Items.map( m => < Item key={m.id} modelo={m.title} bateria={m.bateria} memoria={m.memoria}  precio={m.precio}/> ) /* { modSamsung.map( m => < Item key={m.id} modelo={m.title} bateria={m.bateria} memoria={m.memoria}  precio={m.precio} img={m.src}/> ) }  */}
+            { Items.map( m => < Item key={m.id} modelo={m.title} bateria={m.bateria} memoria={m.memoria}  precio={m.precio} img={m.img}/> ) /* { modSamsung.map( m => < Item key={m.id} modelo={m.title} bateria={m.bateria} memoria={m.memoria}  precio={m.precio} img={m.src}/> ) }  */}
         </div>
     )
 }
