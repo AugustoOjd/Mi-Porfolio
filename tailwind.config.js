@@ -21,7 +21,11 @@ module.exports = {
       '3xl': '1920px',
       // => @media (min-width: 1936px) { ... }
     },
-    extend: {},
+    extend: {
+      height: {
+        '128': '32rem',
+      }
+    },
   },
   variants: {
     extend: {
