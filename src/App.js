@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ItemCount from './components/ItemCount';
 import NavBar from './components/NavBar'
@@ -9,9 +10,14 @@ function App() {
 
   return (
     <div className="container max-auto">
+
+      <BrowserRouter>
+        
         <NavBar/>
         <Presentacion />
         <ItemCount stock={6} initial={1} />
+
+      </BrowserRouter>
     </div>
   );
 }
