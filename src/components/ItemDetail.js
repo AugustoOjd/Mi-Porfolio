@@ -1,53 +1,59 @@
 import React from 'react'
-import s21Detail from '../assets/s21Detail.jpg'
 
-const ItemDetail = ({Item}) => {
+
+const ItemDetail = ({id, img, title, memoria, ram, bateria, camaraP, camaraF, pantalla, precio }) => {
 
     return (
         <>
-            <di className='flex content-center w-full'>
+            <di className='flex content-center w-full max-w-7xl'>
                 
                 <div className='bg-blue-200 h-full w-1/2'>
-                    <img src={s21Detail} className='h-full w-full'></img>
+                    <img src={img} className='h-full w-full'></img>
                 </div>
 
 
-                <div className='bg-red-200 h-full w-1/2 p-2 text-sm md:text-xl lg:text-2xl xl:text-3xl'>
-                    <h2 className='font-bold'>Samsung Galaxy S21</h2>
+                <div className='flex flex-wrap content-evenly bg-gray-50 h-full w-1/2 p-2 text-sm md:text-xl lg:text-2xl xl:text-3xl'>
+                    <h2 className='font-bold'>{title}</h2>
 
-                        <div className='flex'>
-                            <h3>Memoria interna:</h3>
-                            <p className='font-bold'> 88</p>
+                        <div className='flex w-full'>
+                            <h3 className='pr-1'>Memoria interna: </h3>
+                            <p className='font-bold'>{memoria}GB</p>
                         </div>
 
-                        <div className='flex' >
-                            <h3>Memoria ram:</h3>
-                            <p className='font-bold'> 88</p>
+                        <div className='flex w-full' >
+                            <h3 className='pr-1'>Memoria ram: </h3>
+                            <p className='font-bold'>{ram}GB</p>
                         </div>
 
-                        <div className='flex'>
-                            <h3>Bateria:</h3>
-                            <p className='font-bold'> 88</p>
+                        <div className='flex w-full'>
+                            <h3 className='pr-1'>Bateria: </h3>
+                            <p className='font-bold'>{bateria}mhz</p>
                         </div>
 
-                        <div className='flex'>
-                            <h3>Camara principal:</h3>
-                            <p className='font-bold'> 88</p>
+                        <div className='flex w-full'>
+                            <h3 className='pr-1'>Camara principal: </h3>
+                            <p className='font-bold'>{camaraP}MP</p>
                         </div>
 
-                        <div className='flex'>
-                            <h3>Camara Frontal:</h3>
-                            <p className='font-bold'> 88</p>
+                        <div className='flex w-full'>
+                            <h3 className='pr-1'>Camara Frontal:</h3>
+                            <p className='font-bold'>{camaraF}MP</p>
                         </div>
 
-                        <div className='flex'>
-                            <h3>Pantalla:</h3>
-                            <p className='font-bold'> 88</p>
+                        <div className='flex w-full'>
+                            <h3 className='pr-1'>Pantalla: </h3>
+                            <p className='font-bold'>{pantalla}</p>
                         </div>
-
-                    <h2>$99999</h2>
-
-                    <button className='bg-blue-300'>Agregar</button>
+                        
+                        <div className='flex w-full'>
+                            <p className='pr-1'>Precio: </p>
+                            <h2 className='w-full font-bold text-md lg:text-2xl'>${precio}</h2>
+                        </div>
+                        
+                        <div>
+                            
+                        </div>
+                        <button className='bg-blue-300 w-20 md:w-44 md:h-12 rounded shadow font-semibold'>Agregar</button>
 
 
                 </div>

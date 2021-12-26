@@ -59,7 +59,7 @@ const ItemCount = ({stock, initial}) => {
                 <button className='flex justify-center items-center dark:bg-blue-700 bg-blue-300 w-4/5 h-9 m-2 rounded shadow hover:bg-green-700 hover:text-white dark:hover:bg-green-700'>
                     
                     <p className='flex font-medium dark:text-white '>
-                        Agregar al carrito
+                        Comprar
                     </p>
 
                 </button>

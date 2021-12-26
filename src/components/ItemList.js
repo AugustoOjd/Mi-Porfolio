@@ -70,7 +70,7 @@ const ItemList = () => {
     return (
         <div className='flex'>
             
-            { Items.map( m => < Item key={m.id} modelo={m.title} bateria={m.bateria} memoria={m.memoria}  precio={m.precio} img={m.img}/> ) /* { modSamsung.map( m => < Item key={m.id} modelo={m.title} bateria={m.bateria} memoria={m.memoria}  precio={m.precio} img={m.src}/> ) }  */}
+            { Items.map( m => < Item key={m.id} modelo={m.title} memoria={m.memoria}  precio={m.precio} img={m.img}/> ) }
         </div>
     )
 }
