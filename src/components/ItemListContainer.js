@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemList from './ItemList'
 
-const Presentacion = () => {
+const ItemListContainer = () => {
     return (
         <>
             <div className='flex content-center bg-green-300 dark:bg-gray-700 rounded shadow my-3 h-96 p-0.5 m-3 max-w-7xl'>
@@ -15,4 +15,4 @@ const Presentacion = () => {
     )
 }
 
-export default Presentacion
+export default ItemListContainer

@@ -3,6 +3,8 @@ import DarkModeBtn from './DarkModeBtn'
 import CartWidget from './CartWidget'
 import MenuDespegable from './MenuDesplegable'
 
+import {Link} from 'react-router-dom'
+
 import {FiMenu} from 'react-icons/fi'
 import {DiApple} from 'react-icons/di'
 import {SiSamsung} from 'react-icons/si'
@@ -42,30 +44,30 @@ const navbar = () => {
                         <FiMenu className='w-10 h-10 hover:text-white dark:hover:text-green-300'/>
                     </button>
                     <div className='hover:text-white dark:hover:text-green-300'>
-                        <a href={{}} key={{}}>Home</a>
+                        <Link to={"/"} className='font-bold'>Home</Link>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <a href={{}} key={{}}>Apple</a>
+                        <Link to={"/apple"}>Apple</Link>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <a href={{}} key={{}}>Samsung</a>
+                        <Link to={"/samsung"}>Samsung</Link>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <a href={{}} key={{}}>Motorola</a>
+                        <Link to={"/motorola"}>Motorola</Link>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <a href={{}} key={{}}>Xiaomi</a>
+                        <Link to={"xioami"}>Xiaomi</Link>
                     </div>
-                    <a href='#' className='hover:text-white dark:hover:text-green-300'>
+                    <button href='#' className='hover:text-white dark:hover:text-green-300'>
                         <CartWidget/>
-                    </a>
+                    </button>
                     <div>
                         <DarkModeBtn className='' />
                     </div>
             
                 </div>
                 
-                    <div  className=''>{listaMenu}</div>
+                    <div className='lg:hidden'>{listaMenu}</div>
             
             </>
         

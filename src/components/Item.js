@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Item = ({id, modelo, precio, memoria, img}) => {
     return (
@@ -12,10 +13,8 @@ const Item = ({id, modelo, precio, memoria, img}) => {
                     <img src={img} alt="modelo" className='h-52 w-full rounded' />
                     <p className='text-lg  my-0.5 mx-10 hidden' >{id}-</p>
                     <h2 className='text-2xl font-semibold my-0.5 mx-10'>{modelo}</h2>
-                    
-                    <p className='text-xl  my-0.5 mx-10'>{memoria}GB</p>
-                    
                     <h3 className='text-xl  my-0.5 mx-10'>${precio}</h3>
+                    <Link to={"/samsung:id"} className='flex justify-center items-center bg-blue-300 hover:bg-green-600 rounded shadow w-full h-12 text-xl font-bold my-0.5 mx-10'>Detalle</Link>
 
                 </div>
                 
