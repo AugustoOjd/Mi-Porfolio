@@ -4,6 +4,7 @@ import CartWidget from './CartWidget'
 import MenuDespegable from './MenuDesplegable'
 
 import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import {FiMenu} from 'react-icons/fi'
 import {DiApple} from 'react-icons/di'
@@ -44,19 +45,19 @@ const navbar = () => {
                         <FiMenu className='w-10 h-10 hover:text-white dark:hover:text-green-300'/>
                     </button>
                     <div className='hover:text-white dark:hover:text-green-300'>
-                        <Link to={"/"} className='font-bold'>Home</Link>
+                        <NavLink to={"/"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Home</NavLink>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <Link to={"/apple"}>Apple</Link>
+                        <NavLink to={"/apple"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Apple</NavLink>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <Link to={"/samsung"}>Samsung</Link>
+                        <NavLink to={"/samsung"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Samsung</NavLink>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <Link to={"/motorola"}>Motorola</Link>
+                        <NavLink to={"/motorola"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Motorola</NavLink>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <Link to={"xioami"}>Xiaomi</Link>
+                        <NavLink to={"xioami"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Xiaomi</NavLink>
                     </div>
                     <button href='#' className='hover:text-white dark:hover:text-green-300'>
                         <CartWidget/>

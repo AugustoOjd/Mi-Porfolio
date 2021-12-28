@@ -29,14 +29,14 @@ const ItemCount = ({stock, initial}) => {
     return (
 
         <>
-            <div className='flex flex-wrap justify-center items-end bg-green-100 h-72 w-72 rounded shadow dark:bg-gray-600 m-3'>
+            <div className='flex flex-wrap justify-center items-end bg-green-100 h-40 w-64 rounded shadow dark:bg-gray-600 m-3'>
                 
                 <div className='text-red-500 text-lg'>
                     <h3> Nombre: { modSam[0].modelo} </h3>  
                     <p> Stock: {CountStock} </p>
                 </div>
 
-                <div className='flex bg-white dark:bg-gray-100 h-10 w-4/5 mt-32 rounded shadow'>
+                <div className='flex bg-white dark:bg-gray-100 h-10 w-4/5 rounded shadow'>
                     
                         <div>
                             <button onClick={sumStock} className='bg-red-400 h-full w-9 text-xl font-bold rounded-r-sm'> 
@@ -56,7 +56,7 @@ const ItemCount = ({stock, initial}) => {
                     
                 </div>
                 
-                <button className='flex justify-center items-center dark:bg-blue-700 bg-blue-300 w-4/5 h-9 m-2 rounded shadow hover:bg-green-700 hover:text-white dark:hover:bg-green-700'>
+                <button className='flex justify-center items-center dark:bg-blue-700 bg-blue-300 w-4/5 h-9 m-1 rounded shadow hover:bg-green-700 hover:text-white dark:hover:bg-green-700'>
                     
                     <p className='flex font-medium dark:text-white '>
                         Comprar

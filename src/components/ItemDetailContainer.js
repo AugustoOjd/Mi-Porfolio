@@ -1,11 +1,17 @@
 import React from 'react'
 
 import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+
 import ItemDetail from './ItemDetail'
+
+
 import s21Detail from '../assets/s21Detail.jpg'
+import zflip3 from '../assets/zflip3.jpg'
 
 const ItemDetailContainer = () => {
 
+    const {id} = useParams();
 
     const phoneDetail = [
         {
@@ -18,8 +24,21 @@ const ItemDetailContainer = () => {
             camaraP: 12,
             camaraF: 12,
             pantalla: '6,5"',
-            precio: 130000,
+            precio: 90000,
         },
+        {
+            id: 2,
+            title: 'SAMSUNG GALAXY Zflip3',
+            img: zflip3,
+            memoria: 128,
+            ram: 8,
+            bateria: 4000,
+            camaraP: 12,
+            camaraF: 12,
+            pantalla: '6,5"',
+            precio: 125000,
+        },
+
     ]
 
 
@@ -55,7 +74,7 @@ const ItemDetailContainer = () => {
 
                 <div className='flex bg-white w-full h-full rounded shadow dark:bg-gray-100 p-1'>
                     
-                    { Detail.map( d => <ItemDetail img={d.img} title={d.title} memoria={d.memoria} ram={d.ram} bateria={d.bateria} camaraP={d.camaraP} camaraF={d.camaraF} pantalla={d.pantalla} precio={d.precio} />)}
+                    { Detail.map( d => <ItemDetail id={d.id} img={d.img} title={d.title} memoria={d.memoria} ram={d.ram} bateria={d.bateria} camaraP={d.camaraP} camaraF={d.camaraF} pantalla={d.pantalla} precio={d.precio} />)}
 
                 </div>
 

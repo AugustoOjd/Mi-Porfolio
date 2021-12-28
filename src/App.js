@@ -22,7 +22,7 @@ function App() {
 
           <Route index element={<Home />} />
             <Route path="/samsung" element={<ItemListContainer />} />
-              <Route path="/samsung:id" element={<ItemDetailContainer />}/>
+              <Route path="/samsung/:id" element={<ItemDetailContainer />}/>
 
             
             

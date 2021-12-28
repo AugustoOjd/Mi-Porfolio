@@ -53,7 +53,7 @@ const ItemDetail = ({id, img, title, memoria, ram, bateria, camaraP, camaraF, pa
                         <div>
                             
                         </div>
-                        <button className='bg-blue-300 w-20 md:w-44 md:h-12 rounded shadow font-semibold'>Agregar</button>
+                        <button className='bg-blue-300 w-20 md:w-44 md:h-12 rounded shadow font-semibold'>Agregar{id}</button>
 
 
                 </div>
