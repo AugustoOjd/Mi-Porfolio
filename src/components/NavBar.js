@@ -15,18 +15,22 @@ import {SiXiaomi} from 'react-icons/si'
 
 const marcas= [
     {
+        id: 1,
         icon: <DiApple/>,
         name: 'Apple'
     },
     {   
+        id: 2,
         icon: <SiSamsung/>,
         name: 'Samsung'
     },
     {
+        id: 3,
         icon: <SiMotorola/>,
         name: 'Motorola'
     },
     {
+        id: 4,
         icon: <SiXiaomi/>,
         name: 'Xiaomi'
     },
@@ -35,7 +39,7 @@ const marcas= [
 
 const navbar = () => {
 
-    let listaMenu = marcas.map(m => (<MenuDespegable name={m.name} icon={m.icon}/>))
+    // let listaMenu = marcas.map(m => (<MenuDespegable name={m.name} icon={m.icon}/>))
 
     return (
     
@@ -57,7 +61,7 @@ const navbar = () => {
                         <NavLink to={"/motorola"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Motorola</NavLink>
                     </div>
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
-                        <NavLink to={"xioami"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Xiaomi</NavLink>
+                        <NavLink to={"/xiaomi"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Xiaomi</NavLink>
                     </div>
                     <button href='#' className='hover:text-white dark:hover:text-green-300'>
                         <CartWidget/>
@@ -68,7 +72,7 @@ const navbar = () => {
             
                 </div>
                 
-                    <div className='lg:hidden'>{listaMenu}</div>
+                    {/* <div className='lg:hidden'>{listaMenu}</div> */}
             
             </>
         
