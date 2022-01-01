@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const ItemDetail = ({id, img, title, memoria, ram, bateria, camaraP, camaraF, pantalla, precio }) => {
+const ItemDetail = ({id,img, title, memoria, ram, bateria, camaraP, camaraF, pantalla, precio }) => {
 
     return (
         <>
-            <di className='flex content-center w-full max-w-7xl'>
+            <div className='flex content-center w-full max-w-7xl'>
                 
                 <div className='bg-blue-200 h-full w-1/2'>
                     <img src={img} className='h-full w-full'></img>
@@ -14,6 +14,10 @@ const ItemDetail = ({id, img, title, memoria, ram, bateria, camaraP, camaraF, pa
 
                 <div className='flex flex-wrap content-evenly bg-gray-50 h-full w-1/2 p-2 text-sm md:text-xl lg:text-2xl xl:text-3xl'>
                     <h2 className='font-bold'>{title}</h2>
+
+                        <div>
+                            <h2>{id}</h2>
+                        </div>
 
                         <div className='flex w-full'>
                             <h3 className='pr-1'>Memoria interna: </h3>
@@ -59,7 +63,7 @@ const ItemDetail = ({id, img, title, memoria, ram, bateria, camaraP, camaraF, pa
                 </div>
 
 
-            </di>
+            </div>
             
         </>
     )

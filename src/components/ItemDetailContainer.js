@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ItemDetail from './ItemDetail'
-import { phones } from './ItemListContainer'
+import { phones } from '../data/phones'
 
 
 
 const ItemDetailContainer = () => {
 
-    const [Product, setProduct] = useState({})
+    const [Product, setProduct] = useState([])
     const [Loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
@@ -39,7 +39,7 @@ const ItemDetailContainer = () => {
 
                 <div className='flex bg-white w-full h-full rounded shadow dark:bg-gray-100 p-1'>
                     
-                    { Loading ? <h3>Cargando modelo...</h3> :  <ItemDetail />}
+                    { Loading ? <h3>Cargando modelo...</h3> :  <ItemDetail {...Product} />}
                 </div>
 
 

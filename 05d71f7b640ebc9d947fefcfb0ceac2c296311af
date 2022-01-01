@@ -1,0 +1,137 @@
+[33mcommit 05d71f7b640ebc9d947fefcfb0ceac2c296311af[m[33m ([m[1;36mHEAD -> [m[1;32mdesafio-router[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Thu Dec 30 23:48:10 2021 -0300
+
+    desafio router semi completo
+
+[33mcommit 4571e907cd9aea218bd288e6a2ff61e1ab450b11[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Tue Dec 28 17:49:12 2021 -0300
+
+    2da parte desafio router
+
+[33mcommit a720f0d7475e1e99299dddae6679895ac7a0bd16[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sun Dec 26 23:00:42 2021 -0300
+
+    desafio router 1ra parte
+
+[33mcommit 2fa76c2cad90ca4a3e2e01a9afe774a01a69b18d[m[33m ([m[1;32mdesafio-detalle-producto[m[33m)[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 25 21:53:54 2021 -0300
+
+    terminando desafio ItemDetail
+
+[33mcommit 1d621af14dcc6808d07573a0a0d6c3a93c01300b[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 25 10:42:35 2021 -0300
+
+    inicio desafio ItemDetail
+
+[33mcommit b59498e60b56ee09a1e2f47afed37ca695384363[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 25 09:30:20 2021 -0300
+
+    agregando Router
+
+[33mcommit e1b5fdc4c8f9895b089267618bc66c5c81af8b04[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Thu Dec 23 17:25:59 2021 -0300
+
+    termiando desafio map
+
+[33mcommit c5a512f2b5dc46d2b7dc317cf2d73991aff69be2[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Wed Dec 22 23:06:18 2021 -0300
+
+    complentando el desafio 2/3
+
+[33mcommit 8792a8f3a1960f059fcc95bdccc41144bfbfec3f[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Mon Dec 20 22:03:02 2021 -0300
+
+    desafio setTimeout 1ra parte
+
+[33mcommit 106a71ab6cecdbae7efdf83694e675fbe2e5acf2[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sun Dec 19 18:13:25 2021 -0300
+
+    cambio boton dark
+
+[33mcommit 6c5e38d69a036d38b108d0b8b4293f3dca902cc3[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 18 23:24:37 2021 -0300
+
+    terminando desafio de contador de stock
+
+[33mcommit 3e2a4bd9b8938862728e82743494a749395c7188[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 18 16:24:11 2021 -0300
+
+    contador creado, falta interactuar con stock
+
+[33mcommit 9b4af7373842a71a57059aac882f4e7578c13df4[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 18 09:39:44 2021 -0300
+
+    box contador creado
+
+[33mcommit d7f1873f670f3752c341cb36d04d2ed94327fbd5[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 18 09:01:00 2021 -0300
+
+    creando contador
+
+[33mcommit cbcef4c9bb4296208276342eca0329952f9373f4[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Fri Dec 17 22:50:02 2021 -0300
+
+    agregando hover a los links
+
+[33mcommit 53cc777b9dbcad80f4234aad0420bda3ac7b9a56[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Fri Dec 17 22:18:30 2021 -0300
+
+    hidden links menu en responsive
+
+[33mcommit 8270889b1eda54283ea327067b1905f36bc37635[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Wed Dec 15 22:28:22 2021 -0300
+
+    navbar responsive con estados
+
+[33mcommit d652e07dbc1a252c8e9b813336bd9f8e3364ba91[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sun Dec 12 12:16:11 2021 -0300
+
+    desafio list container version definitiva
+
+[33mcommit 7bf077b15a88bfc4efce4019feaf09faf83e5b03[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 11 23:51:55 2021 -0300
+
+    arreglando props desafio jueves
+
+[33mcommit 087f6bb9ce94e893fc06661a677960858179ecaf[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Sat Dec 11 21:30:44 2021 -0300
+
+    agregando icono Cart y list container
+
+[33mcommit 3c5fe9a27b0fd206c82cbff5d989f73fb55b76fa[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Thu Dec 9 21:19:34 2021 -0300
+
+    mdf navbar
+
+[33mcommit 77c16e5ad0b788b79dc8f3740e5e42c0dfc4016c[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Thu Dec 9 21:00:38 2021 -0300
+
+    boceto navbar con dark mode
+
+[33mcommit bcead7b6480a3dfb09d8f9212804d3237a315c17[m
+Author: Augusto Ojeda <okarinex@gmail.com>
+Date:   Thu Dec 2 22:26:09 2021 -0300
+
+    Initialize project using Create React App
