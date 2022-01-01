@@ -8,7 +8,7 @@ const ItemDetail = ({id,img, title, memoria, ram, bateria, camaraP, camaraF, pan
             <div className='flex content-center w-full max-w-7xl'>
                 
                 <div className='bg-blue-200 h-full w-1/2'>
-                    <img src={img} className='h-full w-full'></img>
+                    <img src={img} alt={`${id}-${title}`}className='h-full w-full'></img>
                 </div>
 
 

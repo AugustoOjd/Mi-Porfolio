@@ -6,7 +6,6 @@ import ItemCount from './components/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
-import ItemList from './components/ItemList';
 import Home from './components/Home'
 
 function App() {

@@ -3,7 +3,6 @@ import DarkModeBtn from './DarkModeBtn'
 import CartWidget from './CartWidget'
 import MenuDespegable from './MenuDesplegable'
 
-import {Link} from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
 import {FiMenu} from 'react-icons/fi'
@@ -39,7 +38,7 @@ const marcas= [
 
 const navbar = () => {
 
-    // let listaMenu = marcas.map(m => (<MenuDespegable name={m.name} icon={m.icon}/>))
+    let listaMenu = marcas.map(m => (<MenuDespegable name={m.name} icon={m.icon}/>))
 
     return (
     
@@ -72,7 +71,7 @@ const navbar = () => {
             
                 </div>
                 
-                    {/* <div className='lg:hidden'>{listaMenu}</div> */}
+                    <div className='lg:hidden'>{listaMenu}</div>
             
             </>
         
