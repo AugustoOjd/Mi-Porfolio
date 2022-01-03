@@ -12,6 +12,8 @@ const ItemListContainer = ({greeting}) => {
 
     const {marca} = useParams() 
 
+    console.log(marca)
+
     useEffect(() => {
         setLoading(true);
         const getItems = new Promise ((res)=> {
@@ -31,7 +33,6 @@ const ItemListContainer = ({greeting}) => {
 
     }, [marca])
 
-    console.log("conteiner", Items)
     return  (
         <>
             <div className='flex content-center bg-green-300 dark:bg-gray-700 rounded shadow my-3 h-96 p-0.5 m-3 max-w-7xl'>
@@ -40,8 +41,10 @@ const ItemListContainer = ({greeting}) => {
                     <h3>{greeting}</h3>
                     {Loading ? <h3>Cargando...</h3> : <ItemList items={Items}/>}
                 </div>
+                
 
             </div>
+            
         </>
     )
 }

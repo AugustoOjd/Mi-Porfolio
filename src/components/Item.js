@@ -9,7 +9,7 @@ const Item = ({ id, modelo, precio, img, marca, title}) => {
 
 
         <>
-            <div className='flex bg-green-300 h-full w-64 shadow p-0.5 mx-2 rounded dark:bg-gray-700'>
+            <div  className='flex bg-green-300 h-full w-64 shadow p-0.5 mx-2 rounded dark:bg-gray-700'>
                 
                 <div className='flex flex-wrap content-end items-center bg-white dark:bg-gray-100 h-full w-full shadow p-2 rounded'>
 

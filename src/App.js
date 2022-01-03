@@ -23,10 +23,10 @@ function App() {
           <Route index element={<Home />} />
             <Route path="/:marca" element={<ItemListContainer />} />
 
-              
-              <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
+            <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
+            
 
-              <Route path="*" element={<Navigate to="/" />} />
+            <Route path="*" element={<Navigate to="/" />} />
 
             
             
