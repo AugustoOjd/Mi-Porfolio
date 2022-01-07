@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom'
 
 import ItemDetail from './ItemDetail'
 import {phones} from '../data/phones'
-import ItemDetailList from './ItemDetailList'
 
 
 
@@ -46,7 +45,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <div className='flex content-center bg-green-300 dark:bg-gray-700 rounded shadow my-3 h-96 p-0.5 m-3 max-w-7xl'>
+            <div className='flex content-center bg-green-300 dark:bg-gray-700 rounded shadow my-3 h-auto p-0.5 m-3 max-w-7xl'>
 
                 <div className='flex bg-white w-full h-full rounded shadow dark:bg-gray-100 p-1'>
                     

@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 
-import ItemCount from './components/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
@@ -34,10 +33,6 @@ function App() {
 
 
         </Routes>
-        
-        
-        
-        <ItemCount stock={6} initial={1} />
 
       </BrowserRouter>
     </div>

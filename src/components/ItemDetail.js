@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
 
 const ItemDetail = ({product}) => {
@@ -51,11 +52,16 @@ const ItemDetail = ({product}) => {
                             <p className='pr-1'>Precio: </p>
                             <h2 className='w-full font-bold text-md lg:text-2xl'>${product.precio}</h2>
                         </div>
+
+                        <div className='flex w-full'>
+                            <h3 className='pr-1'>Stock: </h3>
+                            <p className='font-bold'>{product.stock}</p>
+                        </div>
                         
                         <div>
                             
                         </div>
-                        <button className='bg-blue-300 w-20 md:w-44 md:h-12 rounded shadow font-semibold'>Agregar</button>
+                        <ItemCount/>
 
 
                 </div>

@@ -34,6 +34,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,5"',
         precio: 90000,
+        stock: 8
     },
     {
         id: 2,
@@ -47,6 +48,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 5
     },
     {
         id: 3,
@@ -60,6 +62,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 12
     },
     {
         id: 4,
@@ -73,6 +76,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 7,
     },
     {
         id: 5,
@@ -86,6 +90,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 0
     },
 
 
@@ -103,6 +108,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 11,
     },
     {
         id: 7,
@@ -116,6 +122,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 4
     },
     {
         id: 8,
@@ -129,6 +136,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock:15
     },
 
 
@@ -147,6 +155,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 10
     },
     {
         id: 10,
@@ -160,6 +169,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 1
     },
     {
         id: 11,
@@ -173,6 +183,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 5
     },
 
 
@@ -191,6 +202,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 11
     },
     {
         id: 13,
@@ -204,6 +216,7 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 3
     },
     {
         id: 14,
@@ -217,5 +230,6 @@ export const phones = [
         camaraF: 12,
         pantalla: '6,4"',
         precio: 125000,
+        stock: 5
     },
 ];
