@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState } from 'react'
 import ItemCount from './ItemCount'
 
 
+
 const ItemDetail = ({product}) => {
-    console.log(product)
+
+
+    const [Contenido, setContenido] = useState()
+
+
     return (
         <>
         {product.map(product=>
@@ -59,9 +64,11 @@ const ItemDetail = ({product}) => {
                         </div>
                         
                         <div>
+                            <ItemCount stock={product.stock} initial={1} />
                             
                         </div>
-                        <ItemCount/>
+                        
+                        
 
 
                 </div>
@@ -70,6 +77,8 @@ const ItemDetail = ({product}) => {
             </div>  
             </>    
         )}
+
+            
         </>
     )
 }

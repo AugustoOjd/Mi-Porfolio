@@ -15,8 +15,6 @@ const ItemDetailContainer = () => {
 
     const { itemId } = useParams()
 
-    console.log(itemId)
-
     useEffect(() => {
         setLoading(true)
         const getPhones = new Promise((res, rej)=>{
