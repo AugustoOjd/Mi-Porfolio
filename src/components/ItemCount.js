@@ -6,25 +6,23 @@ import {Link, useParams} from 'react-router-dom'
 const ItemCount = ({stock, initial, onAdd}) => {
 
     const [Contador, setContador] = useState(initial)
-    const [CountStock, setCountStock] = useState(stock)
-
+    const [BtnChange, setBtnChange] = useState(true)
 
     const { cart } = useParams()
 
     const sumar = ()=>{
-        setContador((stock > 0 ? Contador + 1 : Contador) && (Contador === stock ? Contador : Contador + 1))
-        setCountStock(stock - 1)
-        console.log(CountStock)
+        setContador((stock > 0 ? Contador + 1 : 0) && (Contador === stock ? Contador : Contador + 1))
     }
 
     const restar = ()=>{
         setContador(Contador > 1 ? Contador - 1 : Contador)
-        setCountStock(stock + 1)
-        console.log(CountStock)
     }
 
-    const addToCart = ()=>{
-        console.log(Contador)
+    const addToCart = (e)=>{
+        setBtnChange(false)
+        e.preventDefault()
+
+        
     }
 
 
@@ -40,6 +38,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
     return (
 
         <>
+            
+            
+        { BtnChange ?
+
+            <>
+            
             <div className='flex flex-wrap justify-center items-end bg-green-50 h-auto w-auto rounded shadow dark:bg-gray-600'>
 
                 <div className='flex bg-white dark:bg-gray-100 h-10 w-full rounded shadow'>
@@ -62,15 +66,29 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     
                 </div>
                 
-                <Link to={""} onClick={addToCart} className='flex justify-center items-center dark:bg-blue-700 bg-blue-300 w-full h-11 rounded shadow hover:bg-green-700 hover:text-white dark:hover:bg-green-700'>
+                <button onClick={addToCart} className='flex justify-center items-center dark:bg-blue-700 bg-blue-300 w-full h-11 rounded shadow hover:bg-green-700 hover:text-white dark:hover:bg-green-700'>
                     
                     <p className='flex justify-center items-center font-semibold dark:text-white p-3'>
                         Agregar al carrito
                     </p>
 
-                </Link>
+                </button>
 
             </div>
+
+            </>
+            :
+            <>
+            <div className='flex'>
+                <h2 className='bg-blue-600 text-white p-1 mr-1'>Agregaste {Contador >= 1 ? Contador : 0 } productos al carrito </h2>
+                <Link to={"/cart"} className='bg-green-600 p-1'>
+                    Ir al carrito
+                </Link>
+            </div>
+            </>
+
+        }
+
         </>
     )
 }
