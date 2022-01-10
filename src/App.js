@@ -7,13 +7,17 @@ import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
 import Home from './components/Home'
 import Cart from './components/Cart'
+import { ThemeContext } from './components/CartContext';
 
 function App() {
 
 
   return (
-    <div className="container  max-auto">
-
+    
+    <>
+    <ThemeContext.Provider>
+    <div className="container max-auto">
+      
       <BrowserRouter>
 
         <NavBar/>
@@ -24,7 +28,9 @@ function App() {
             <Route path="/:marca" element={<ItemListContainer />} />
 
             <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
-            <Route path="/:cart" element={<Cart/>} />
+            
+            <Route path="/carrito" element={<Cart/>} />
+
             
 
             <Route path="*" element={<Navigate to="/" />} />
@@ -37,8 +43,13 @@ function App() {
         </Routes>
 
       </BrowserRouter>
+      
     </div>
+    </ThemeContext.Provider>
+    </>
   );
+
+
 }
 
 export default App;

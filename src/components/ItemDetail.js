@@ -1,12 +1,10 @@
-import React, {useState } from 'react'
+import React from 'react'
 import ItemCount from './ItemCount'
 
 
 
 const ItemDetail = ({product}) => {
 
-
-    const [Contenido, setContenido] = useState()
 
 
     return (

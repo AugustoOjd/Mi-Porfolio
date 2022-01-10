@@ -8,7 +8,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [Contador, setContador] = useState(initial)
     const [BtnChange, setBtnChange] = useState(true)
 
-    const { cart } = useParams()
 
     const sumar = ()=>{
         setContador((stock > 0 ? Contador + 1 : 0) && (Contador === stock ? Contador : Contador + 1))
@@ -19,10 +18,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     const addToCart = (e)=>{
+        onAdd = Contador
         setBtnChange(false)
         e.preventDefault()
 
-        
+        console.log(onAdd)
     }
 
 
@@ -81,7 +81,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <>
             <div className='flex'>
                 <h2 className='bg-blue-600 text-white p-1 mr-1'>Agregaste {Contador >= 1 ? Contador : 0 } productos al carrito </h2>
-                <Link to={"/cart"} className='bg-green-600 p-1'>
+                <Link to={"/carrito"} className='bg-green-600 p-1'>
                     Ir al carrito
                 </Link>
             </div>

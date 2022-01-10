@@ -76,9 +76,9 @@ const Navbar = () => {
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
                         <NavLink to={"/xiaomi"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Xiaomi</NavLink>
                     </div>
-                    <button href='#' className='hover:text-white dark:hover:text-green-300'>
+                    <NavLink to={"/carrito"} href='#' className='hover:text-white dark:hover:text-green-300'>
                         <CartWidget/>
-                    </button>
+                    </NavLink>
                     <div>
                         <DarkModeBtn className='' />
                     </div>
