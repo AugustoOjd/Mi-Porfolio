@@ -7,7 +7,7 @@ import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
 import Home from './components/Home'
 import Cart from './components/Cart'
-import { ThemeContext } from './components/CartContext';
+import { CartProvider } from '../src/context/CartContext';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
   return (
     
     <>
-    <ThemeContext.Provider>
+    <CartProvider>
     <div className="container max-auto">
       
       <BrowserRouter>
@@ -45,7 +45,7 @@ function App() {
       </BrowserRouter>
       
     </div>
-    </ThemeContext.Provider>
+    </CartProvider>
     </>
   );
 

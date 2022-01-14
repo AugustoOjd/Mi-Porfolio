@@ -1,21 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ItemDetail from './ItemDetail'
 import {phones} from '../data/phones'
+import { CartContext } from '../context/CartContext'
 
 
 
 const ItemDetailContainer = () => {
+
+    const theme = useContext(CartContext)
+    console.log(theme)
 
     const [product, setProduct] = useState([])
     const [Loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
 
-    console.log(itemId)
+    
 
 
     useEffect(() => {
@@ -25,7 +29,7 @@ const ItemDetailContainer = () => {
             if(uno === "1"){
                 setTimeout(()=>{
                     res(phones)
-                }, 1000)
+                }, )
             }else{
                 rej("Hubo un error al cargar los productos")
             }

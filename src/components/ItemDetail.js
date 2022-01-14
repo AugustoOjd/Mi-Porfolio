@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 import ItemCount from './ItemCount'
 
 
 
 const ItemDetail = ({product}) => {
-
 
 
     return (
@@ -62,7 +62,7 @@ const ItemDetail = ({product}) => {
                         </div>
                         
                         <div>
-                            <ItemCount stock={product.stock} initial={product.stock >= 1 ? 1 : 0} />
+                            <ItemCount img={product.img} precio={product.precio} title={product.title} onAdd={product.id} stock={product.stock} initial={product.stock >= 1 ? 1 : 0} />
                             
                         </div>
                         

@@ -21,7 +21,7 @@ const ItemListContainer = ({greeting}) => {
                 const myData = marca ? phones.filter(m=> m.marca === marca) : phones;
 
                 res(myData)
-            }, 1000);
+            },);
         })
 
         getItems
