@@ -7,7 +7,7 @@ import {CartContext} from '../context/CartContext'
 const ItemCount = ({stock, initial, cantidad, title, precio, img, id}) => {
 
     const [Contador, setContador] = useState(initial)
-    const [BtnChange, setBtnChange] = useState(true)
+    
 
     const {addItem, elementInList} = useContext(CartContext)
 
@@ -24,7 +24,7 @@ const ItemCount = ({stock, initial, cantidad, title, precio, img, id}) => {
 
     const addToCart = (e)=>{
         cantidad = Contador
-        setBtnChange(false)
+        
         e.preventDefault()
         addItem({id, cantidad, title, precio, img})
         // addName(title)

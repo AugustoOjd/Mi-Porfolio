@@ -9,12 +9,12 @@ export const CartProvider = ({children}) => {
 
     
     const addItem = (item)=>{
-        console.log("esto es item",item)
+        // console.log("esto es item",item)
 
 
 
         setCart((prev)=>{
-            console.log(prev)
+            // console.log(prev)
             return prev.concat(item )
             
         })
@@ -31,23 +31,21 @@ export const CartProvider = ({children}) => {
 
 
     const elementInList = (id)=>{
-        console.log("esto es some", id)
+        
         return Cart.some(e=> e.id === id )
     }
 
-    const sumarPrecio = ()=>{
-        
-    }
+    
 
     const clearList = ()=>{
         setCart([])
     }
 
-
     
     const context ={
         cart: Cart,
-        total: Cart.length,
+        total: Cart.reduce((acc, item)=>{return acc += item.cantidad},0),
+        montoTotal: Cart.reduce((acc, item)=>{return acc += (item.cantidad * item.precio)}, 0),
         addItem:addItem,
         clear: clearList,
         remove: removeItem,

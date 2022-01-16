@@ -12,6 +12,7 @@ import {SiMotorola} from 'react-icons/si'
 import {SiXiaomi} from 'react-icons/si'
 
 
+
 const marcas= [
     {
         id: 1,
