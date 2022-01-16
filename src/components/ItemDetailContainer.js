@@ -11,8 +11,6 @@ import { CartContext } from '../context/CartContext'
 
 const ItemDetailContainer = () => {
 
-    const theme = useContext(CartContext)
-    console.log(theme)
 
     const [product, setProduct] = useState([])
     const [Loading, setLoading] = useState(true)

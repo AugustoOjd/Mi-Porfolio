@@ -1,31 +1,43 @@
 import {createContext} from "react";
 import { useState } from "react";
 
-export const CartContext = createContext({
-    List: [],
-    
-});
+export const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
     
     const [Cart, setCart] = useState([])
 
     
-    const addItem = (cantidad)=>{
+    const addItem = (item)=>{
+        console.log("esto es item",item)
+
+
 
         setCart((prev)=>{
-            return prev.concat(cantidad)
-
+            console.log(prev)
+            return prev.concat(item )
+            
         })
+        
     }
 
-    // const addName = ()=>{
+    const removeItem = (id)=>{
+        const remove = Cart.filter(e=> e.id !== id )
         
-    // }
+        setCart(remove)
 
-    // const elementInList = (cantidad)=>{
-    //     return Cart.some(e=> e === cantidad.id )
-    // }
+        
+    }
+
+
+    const elementInList = (id)=>{
+        console.log("esto es some", id)
+        return Cart.some(e=> e.id === id )
+    }
+
+    const sumarPrecio = ()=>{
+        
+    }
 
     const clearList = ()=>{
         setCart([])
@@ -38,8 +50,8 @@ export const CartProvider = ({children}) => {
         total: Cart.length,
         addItem:addItem,
         clear: clearList,
-        // elementInList: elementInList,
-        // addName:addName
+        remove: removeItem,
+        elementInList: elementInList,
     }
 
     return(

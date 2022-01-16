@@ -4,12 +4,14 @@ import {CartContext} from '../context/CartContext'
 
 
 
-const ItemCount = ({stock, initial, onAdd, title, precio, img}) => {
+const ItemCount = ({stock, initial, cantidad, title, precio, img, id}) => {
 
     const [Contador, setContador] = useState(initial)
     const [BtnChange, setBtnChange] = useState(true)
 
-    const {addItem, addName} = useContext(CartContext)
+    const {addItem, elementInList} = useContext(CartContext)
+
+    const inCart = elementInList(id)
 
 
     const sumar = ()=>{
@@ -21,17 +23,16 @@ const ItemCount = ({stock, initial, onAdd, title, precio, img}) => {
     }
 
     const addToCart = (e)=>{
-        onAdd = Contador
+        cantidad = Contador
         setBtnChange(false)
         e.preventDefault()
-        addItem({Contador, title, precio, img})
+        addItem({id, cantidad, title, precio, img})
         // addName(title)
 
-
-        console.log(onAdd)
+        console.log(cantidad)
         console.log(title)
         console.log(precio)
-        console.log(img)
+        
     }
 
 
@@ -49,9 +50,21 @@ const ItemCount = ({stock, initial, onAdd, title, precio, img}) => {
         <>
             
             
-        { BtnChange 
+        { inCart 
         
         ?
+
+        <>
+            <h3>ya agregaste este producto</h3>
+            <div className='flex'>
+                {/* <h2 className='bg-blue-600 text-white p-1 mr-1'>Agregaste {Contador >= 1 ? Contador : 0 } productos al carrito </h2> */}
+                <Link to={"/carrito"} className='bg-green-600 p-1'>
+                    Ir al carrito
+                </Link>
+            </div>
+        </>
+
+        :
 
             <>
             
@@ -87,17 +100,8 @@ const ItemCount = ({stock, initial, onAdd, title, precio, img}) => {
 
             </div>
 
-            </>
-
-            :
-
-            <>
-            <div className='flex'>
-                <h2 className='bg-blue-600 text-white p-1 mr-1'>Agregaste {Contador >= 1 ? Contador : 0 } productos al carrito </h2>
-                <Link to={"/carrito"} className='bg-green-600 p-1'>
-                    Ir al carrito
-                </Link>
-            </div>
+            
+            
             </>
 
         }

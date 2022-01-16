@@ -4,7 +4,11 @@ import { CartContext } from '../context/CartContext'
 
 const Cart = () => {
 
-    const { cart, clear, total } = useContext(CartContext)
+    const { cart, clear, total, remove } = useContext(CartContext)
+    
+    // const theme = useContext(CartContext)
+    // console.log("esto es el context", theme)
+
     
 
     return (
@@ -12,26 +16,27 @@ const Cart = () => {
             
             {cart.map(l=> 
                 <>
-                    <div className='bg-gray-200'>
+                    <div className='bg-green-300 p-1  my-2'>
 
-                    <div className='flex bg-blue-500 w-full h-96 mt-2'>
+                    <div className='flex bg-blue-500 w-full h-96 rounded'>
 
                         <div className='bg-green-100 w-1/2 h-full'>
-                            <h2 className='text-2xl'>Aqui va la imagen: {l.img}</h2>
+                            <img className='w-full h-full' src={l.img} alt={l.title}></img>
                         </div>
 
                         <div className='bg-blue-300 w-1/2 h-full p-5'>
                             <h2 className='text-2xl'>Aqui va el detalle de compra</h2>
                             <p className='text-2xl'>{`Modelo: ${l.title}`}</p>
-                            <p className='text-2xl'>{`Cantidad: ${l.Contador}`}</p>
-                            <p className='text-2xl'>{`Monton: $${l.precio}`}</p>
+                            <p className='text-2xl'>{`Cantidad: ${l.cantidad}`}</p>
+                            <p className='text-2xl'>{`Precio unidad: $${l.precio} `}</p>
+                            <p className='text-2xl'>{`Precio total: $${l.precio * l.cantidad}`}</p>
 
-                            
+                            <button onClick={()=> {remove(l.id)}} className='bg-gray-500'>Eliminar</button>
                         </div>
                         
                     </div>
                 </div>
-
+                
                 </>
             )}
 

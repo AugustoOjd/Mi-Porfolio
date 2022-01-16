@@ -62,7 +62,7 @@ const ItemDetail = ({product}) => {
                         </div>
                         
                         <div>
-                            <ItemCount img={product.img} precio={product.precio} title={product.title} onAdd={product.id} stock={product.stock} initial={product.stock >= 1 ? 1 : 0} />
+                            <ItemCount id={product.id} img={product.img} precio={product.precio} title={product.title} onAdd={product.id} stock={product.stock} initial={product.stock >= 1 ? 1 : 0} />
                             
                         </div>
                         
