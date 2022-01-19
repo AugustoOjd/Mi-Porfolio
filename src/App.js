@@ -17,15 +17,15 @@ import { fileUpload } from './firebase/fileUpload'
 function App() {
 
 
-  const arrayUpload = ()=>{
+  // const arrayUpload = ()=>{
 
-    phones.forEach(async (element) => {
-      const imgURL = await fileUpload(element.img)
+  //   phones.forEach(async (element) => {
+  //     const imgURL = await fileUpload(element.img)
 
-      addDoc(collection(db, 'phones'), {...element, img: imgURL })
-    });
+  //     addDoc(collection(db, 'phones'), {...element, img: imgURL })
+  //   });
 
-  }
+  // }
 
 
   return (
@@ -37,7 +37,7 @@ function App() {
       <BrowserRouter>
 
         <NavBar/>
-        <button onClick={arrayUpload}>SUBIR COSAS</button>
+        {/* <button onClick={arrayUpload}>SUBIR COSAS</button> */}
         <Routes>
 
           <Route index element={<Home />} />
