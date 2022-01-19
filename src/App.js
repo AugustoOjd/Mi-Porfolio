@@ -9,7 +9,23 @@ import Home from './components/Home'
 import Cart from './components/Cart'
 import { CartProvider } from '../src/context/CartContext';
 
+import {phones} from '../src/data/phones'
+import db from './firebase/firebase';
+import { collection, addDoc } from 'firebase/firestore';
+import { fileUpload } from './firebase/fileUpload'
+
 function App() {
+
+
+  const arrayUpload = ()=>{
+
+    phones.forEach(async (element) => {
+      const imgURL = await fileUpload(element.img)
+
+      addDoc(collection(db, 'phones'), {...element, img: imgURL })
+    });
+
+  }
 
 
   return (
@@ -21,7 +37,7 @@ function App() {
       <BrowserRouter>
 
         <NavBar/>
-        
+        <button onClick={arrayUpload}>SUBIR COSAS</button>
         <Routes>
 
           <Route index element={<Home />} />

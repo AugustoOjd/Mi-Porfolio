@@ -15,7 +15,7 @@ export const CartProvider = ({children}) => {
 
         setCart((prev)=>{
             // console.log(prev)
-            return prev.concat(item )
+            return prev.concat(item)
             
         })
         

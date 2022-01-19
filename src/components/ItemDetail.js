@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../context/CartContext'
+import React from 'react'
 import ItemCount from './ItemCount'
 
 
@@ -9,7 +8,7 @@ const ItemDetail = ({product}) => {
 
     return (
         <>
-        {product.map(product=>
+        {/* {product.map(product=> */}
             <>
                 <div className='flex content-center w-full max-w-7xl'>
                 
@@ -74,7 +73,7 @@ const ItemDetail = ({product}) => {
 
             </div>  
             </>    
-        )}
+        {/* )} */}
 
             
         </>

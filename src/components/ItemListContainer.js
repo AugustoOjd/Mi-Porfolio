@@ -2,7 +2,9 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList'
 
-import {phones} from '../data/phones'
+
+import db from '../firebase/firebase';
+import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 
 
 const ItemListContainer = ({greeting}) => {
@@ -14,21 +16,43 @@ const ItemListContainer = ({greeting}) => {
 
     console.log(marca)
 
-    useEffect(() => {
+    useEffect( async () => {
         setLoading(true);
-        const getItems = new Promise ((res)=> {
-            setTimeout(() => {
-                const myData = marca ? phones.filter(m=> m.marca === marca) : phones;
 
-                res(myData)
-            },);
-        })
+        const getItems = marca ?
+        query(collection(db, 'phones'), where('marca', '==', marca))
+        /* query(collection(db, 'phones'), where('marca', '==', marca), orderBy("name")) */
+        :
+        collection(db, 'phones');
 
-        getItems
-            .then((res)=>{
-                setItems(res)
-            })
-            .finally(()=> setLoading(false))
+    try {
+        const querySnapshot = await getDocs(getItems)
+
+        console.log(querySnapshot.docs)
+
+        setItems(querySnapshot.docs.map(el => {
+            return { ...el.data(), id: el.id }
+        }))
+    }
+    catch {
+        console.log("SE ROMPIO")
+    }
+    
+    setLoading(false)
+
+        // const getItems = new Promise ((res)=> {
+        //     setTimeout(() => {
+        //         const myData = marca ? phones.filter(m=> m.marca === marca) : phones;
+
+        //         res(myData)
+        //     },);
+        // })
+
+        // getItems
+        //     .then((res)=>{
+        //         setItems(res)
+        //     })
+        //     .finally(()=> setLoading(false))
 
 
     }, [marca])

@@ -32,7 +32,7 @@ export const phones = [
         bateria: 4000,
         camaraP: 12,
         camaraF: 12,
-        pantalla: '6,5"',
+        pantalla: 6.5,
         precio: 90000,
         stock: 8
     },

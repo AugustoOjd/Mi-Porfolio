@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ItemDetail from './ItemDetail'
-import {phones} from '../data/phones'
-import { CartContext } from '../context/CartContext'
+
+import db from '../firebase/firebase';
+import { getDoc, doc } from 'firebase/firestore';
 
 
 
@@ -21,27 +22,34 @@ const ItemDetailContainer = () => {
 
 
     useEffect(() => {
-        setLoading(true)
-        const getPhones = new Promise((res, rej)=>{
-            let uno = "1"
-            if(uno === "1"){
-                setTimeout(()=>{
-                    res(phones)
-                }, )
-            }else{
-                rej("Hubo un error al cargar los productos")
-            }
-        })
+        const ref = doc(db, 'phones', itemId)
 
-        getPhones
-            .then((item)=>{
-                if(itemId){
-                    const myData = item.filter((e)=> e.id === parseInt(itemId))
-                    setProduct(myData)
-                }else{
-                    setProduct(item)
-                }
-            })
+    getDoc(ref)
+    .then( querySnapshot => {
+        setProduct({...querySnapshot.data(), id: querySnapshot.id})
+    })
+    .catch(e => console.log(e))
+        // setLoading(true)
+        // const getPhones = new Promise((res, rej)=>{
+        //     let uno = "1"
+        //     if(uno === "1"){
+        //         setTimeout(()=>{
+        //             res(phones)
+        //         }, )
+        //     }else{
+        //         rej("Hubo un error al cargar los productos")
+        //     }
+        // })
+
+        // getPhones
+        //     .then((item)=>{
+        //         if(itemId){
+        //             const myData = item.filter((e)=> e.id === parseInt(itemId))
+        //             setProduct(myData)
+        //         }else{
+        //             setProduct(item)
+        //         }
+        //     })
             .finally(()=> setLoading(false))
         
     }, [itemId])
