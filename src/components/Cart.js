@@ -57,8 +57,11 @@ const Cart = () => {
                         <div className='bg-white w-1/3 h-full' >
                             <button onClick={clear} className='bg-red-300 w-full h-full'> Clear list </button>
                         </div>
-                        <div className='bg-white w-1/3 h-full'>
-                            <button className='bg-green-400 w-full h-full'> Terminar compra </button> 
+                        <div className='bg-white w-1/3 h-full '>
+                            <div className='flex justify-center items-center bg-green-400 w-full h-full'>
+                            <Link to={"/carrito/finalizar-compra"} className=''> Terminar compra </Link> 
+                            </div>
+                            
                         </div>
                         
                         

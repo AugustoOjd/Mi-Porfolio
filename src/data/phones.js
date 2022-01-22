@@ -161,7 +161,7 @@ export const phones = [
         id: 10,
         marca: 'apple',
         img: iphone12,
-        title: 'iPphone11',
+        title: 'iPhone11',
         memoria: 128,
         ram: 8,
         bateria: 4000,

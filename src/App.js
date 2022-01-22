@@ -8,6 +8,7 @@ import ItemListContainer from './components/ItemListContainer';
 import Home from './components/Home'
 import Cart from './components/Cart'
 import { CartProvider } from '../src/context/CartContext';
+import DateCompra from './components/DateCompra'
 
 import {phones} from '../src/data/phones'
 import db from './firebase/firebase';
@@ -46,6 +47,8 @@ function App() {
             <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
             
             <Route path="/carrito" element={<Cart/>} />
+
+            <Route path="/carrito/finalizar-compra" element={<DateCompra/>} />
 
             
 
