@@ -52,7 +52,7 @@ const ItemDetail = ({product}) => {
                         
                         <div className='flex w-full'>
                             <p className='pr-1'>Precio: </p>
-                            <h2 className='w-full font-bold text-md lg:text-2xl'>${product.precio}</h2>
+                            <h2 className='w-full font-bold text-md lg:text-2xl'>{(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(product.precio))}</h2>
                         </div>
 
                         <div className='flex w-full'>

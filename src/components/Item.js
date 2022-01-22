@@ -16,7 +16,7 @@ const Item = ({ id, modelo, precio, img, marca, title}) => {
                     <img src={img} alt={`${id}-${title}`} className='h-52 w-full rounded' />
                     <p className='text-lg  my-0.5 mx-10 hidden' >{id}-</p>
                     <h2 className='text-2xl font-semibold my-0.5 mx-10'>{modelo}</h2>
-                    <h3 className='text-xl  my-0.5 mx-10'>${precio}</h3>
+                    <h3 className='text-xl  my-0.5 mx-10'> {(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(precio))}</h3>
                     <h3 className='hidden'>{marca}</h3>
                     <Link to={`/productos/${id}`} className='flex justify-center items-center bg-blue-300 hover:bg-green-600 rounded shadow w-full h-12 text-xl font-bold my-0.5 mx-10'>Detalle</Link>
 

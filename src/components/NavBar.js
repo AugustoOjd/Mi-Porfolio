@@ -17,35 +17,36 @@ const marcas= [
     {
         id: 1,
         icon: <DiApple/>,
-        name: 'Apple'
+        marca: 'Apple'
     },
     {   
         id: 2,
         icon: <SiSamsung/>,
-        name: 'Samsung'
+        marca: 'Samsung'
     },
     {
         id: 3,
         icon: <SiMotorola/>,
-        name: 'Motorola'
+        marca: 'Motorola'
     },
     {
         id: 4,
         icon: <SiXiaomi/>,
-        name: 'Xiaomi'
+        marca: 'Xiaomi'
     },
 ]
+
 
 
 const Navbar = () => {
 
     const [Down, setDown] = useState(false)
-    // const [UP, setUP] = useState(true)
+
 
 
     const Desplegar = ()=>{
         if(Down === false){
-            setDown(marcas.map(m => (<MenuDespegable key={m.id} name={m.name} icon={m.icon}/>))) 
+            setDown(marcas.map(m => (<MenuDespegable id={m.id} name={m.marca} icon={m.icon} marca={m.marca}/>))) 
         }else{
             setDown(false)
         }
@@ -54,6 +55,8 @@ const Navbar = () => {
             
         console.log("click")
     }
+
+
 
     return (
     
@@ -77,7 +80,7 @@ const Navbar = () => {
                     <div className='hidden lg:flex hover:text-white dark:hover:text-green-300'>
                         <NavLink to={"/xiaomi"} className={ ({isActive })  => (isActive) ? 'text-white dark:text-green-300' : ''}>Xiaomi</NavLink>
                     </div>
-                    <NavLink to={"/carrito"} href='#' className='hover:text-white dark:hover:text-green-300'>
+                    <NavLink to={"/carrito"} className='hover:text-white dark:hover:text-green-300'>
                         <CartWidget/>
                     </NavLink>
                     <div>

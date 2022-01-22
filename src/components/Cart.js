@@ -37,8 +37,8 @@ const Cart = () => {
                             <h2 className='text-2xl'>Aqui va el detalle de compra</h2>
                             <p className='text-2xl'>{`Modelo: ${l.title}`}</p>
                             <p className='text-2xl'>{`Cantidad: ${l.cantidad}`}</p>
-                            <p className='text-2xl'>{`Precio unidad: $${l.precio} `}</p>
-                            <p className='text-2xl'>{`Precio total unidades: $${l.precio * l.cantidad}`}</p>
+                            <p className='text-2xl'>{`Precio unidad: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(l.precio))} `}</p>
+                            <p className='text-2xl'>{`Precio total unidades: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(l.precio * l.cantidad))}`}</p>
 
                             <button onClick={()=> {remove(l.id)}} className='bg-gray-500'>Eliminar</button>
                         </div>
@@ -51,7 +51,7 @@ const Cart = () => {
 
                     <div className='flex justify-around items-center bg-gray-200 h-16 my-1'>
                         <div className='bg-white w-1/3 h-full' >
-                            <h2 className=''>{`Precio Total: $${montoTotal}`}</h2>
+                            <h2 className=''>{`Precio Total: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(montoTotal))}`}</h2>
                             <h3>{`Cantidad de productos: ${total === 0 ? "" : total}`}</h3>
                         </div>
                         <div className='bg-white w-1/3 h-full' >
