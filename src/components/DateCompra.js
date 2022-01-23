@@ -1,5 +1,8 @@
 import React, {useContext, useState} from 'react';
 import { CartContext } from '../context/CartContext'
+import { collection, addDoc, getFirestore } from "firebase/firestore";
+
+
 
 const DateCompra = () => {
 
@@ -12,8 +15,11 @@ const DateCompra = () => {
         correo: ""
     });
     
-    const buyHandler = (e)=>{
+    const buyHandler = async (e)=>{
         e.preventDefault()
+
+
+
         const order ={
             buyer: {
                 name: Data.nombre,
@@ -29,6 +35,15 @@ const DateCompra = () => {
             }], 
             total: montoTotal
         }
+
+        const db = getFirestore()
+        
+
+        // Add a new document with a generated id.
+        const docRef = await addDoc(collection(db, "orders"), order );
+        console.log("Document written with ID: ", docRef.id);
+
+        
         
         
         console.log("click", order)
@@ -40,8 +55,8 @@ const DateCompra = () => {
         const newData = {...Data}
         newData[e.target.id]= e.target.value
         setData(newData)
-        console.log(newData)
-        console.log("esto es Data", Data.nombre)
+        // console.log(newData)
+        // console.log("esto es Data", Data.nombre)
     }   
 
     return( 
@@ -51,7 +66,7 @@ const DateCompra = () => {
 
             <div className='bg-green-300 w-80 md:w-96 p-5'>
                 <form className='flex flex-col'>
-                    {/* <label>Nombre: </label> */}
+                    <label>Nombre: </label>
                     <input onChange={(e)=>dateInput(e)} id='nombre' type="text" name="name" value={Data.nombre} placeholder='Nombre'></input>
                     <label>Apellido: </label>
                     <input onChange={(e)=>dateInput(e)} id='apellido' type="text" name="lastName" value={Data.apellido} placeholder='Apellido'></input>
@@ -64,7 +79,22 @@ const DateCompra = () => {
                     <h3>{`Productos: ${cart.map(t=> t.title + `(${t.cantidad})` )}`}</h3>
                     <h3>{`Precio total: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(montoTotal))}`}</h3>
                     <button onClick={(e)=>buyHandler(e)} className='bg-blue-500 p-2 rounded'>Comprar</button>
-                </div>            
+                </div>
+
+                {/* {Data.nombre.length < 3 
+                
+                ?
+
+                <div>
+                    <p>Minimo 3 caracteres</p>
+                </div>
+
+                :
+
+                ''
+                
+                } */}
+
             </div>
         </div>
         
