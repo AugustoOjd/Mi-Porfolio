@@ -1,6 +1,8 @@
 import React from 'react'
 import ComparationContainer from './ComparationContainer'
 
+
+
 const Home = () => {
     return (
         <>  
@@ -14,14 +16,15 @@ const Home = () => {
                 <div className='flex justify-center items-center bg-green-400 h-full w-1/2'>
                     <ComparationContainer/> 
                 </div>
-
                 <div className='flex justify-center items-center bg-red-400 h-full w-1/2'>
                     <ComparationContainer/> 
                 </div>
-
+            
             
 
             </div>
+
+            
             
         </>
     )
