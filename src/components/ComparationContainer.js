@@ -41,18 +41,21 @@ const ComparationContainer = () => {
     
     
     <>  
-        
-        <label  for='phones'>Choose your phone</label>
-        <select onChange={clickHandler} className='overflow-y-scroll '  name='select'>
-            <option className='' >Selecciona tu telefono</option>
-            {phones.map(i=> (
-                <option  className='' id={i.id} value={i.value}>{i.title}</option>
-            ))}
+        <div >
             
+            <div>
+                <select onChange={clickHandler} className='w-full h-auto md:h-10 rounded'  name='select'>
+                    <option className='' >Selecciona tu telefono</option>
+                    {phones.map(i=> (
+                        <option  className='' id={i.id} value={i.value}>{i.title}</option>
+                    ))}
+                    
+                    
+                </select>
+            </div>
+
             
-        </select>
         
-        <div>
             {
                 Show.map(e=> <ComparationList item={e}/>)
             }
