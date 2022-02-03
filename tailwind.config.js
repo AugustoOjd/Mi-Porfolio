@@ -24,7 +24,8 @@ module.exports = {
     extend: {
       height: {
         '128': '32rem',
-      }
+        '150': '50rem',
+      },
     },
   },
   variants: {

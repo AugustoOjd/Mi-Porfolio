@@ -10,6 +10,7 @@ import Cart from './components/Cart'
 import { CartProvider } from '../src/context/CartContext';
 import DateCompra from './components/DateCompra'
 import Footer from './components/Footer'
+import BannerJoke from './components/BannerJoke';
 
 import {phones} from '../src/data/phones'
 import db from './firebase/firebase';
@@ -34,40 +35,38 @@ function App() {
     
     <>
     <CartProvider>
-    <div className="container max-auto">
-      
-      <BrowserRouter>
 
-        <NavBar/>
-        {/* <button onClick={arrayUpload}>SUBIR COSAS</button> */}
-        <Routes>
+    <div className='flex justify-center'>
+      <div className="container w-full">
+        
+        <BrowserRouter>
 
-          <Route index element={<Home />} />
-            <Route path="/:marca" element={<ItemListContainer />} />
+          <NavBar/>
+          {/* <button onClick={arrayUpload}>SUBIR COSAS</button> */}
 
-            <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
-            
-            <Route path="/carrito" element={<Cart/>} />
+          <BannerJoke/>
+          <Routes>
 
-            <Route path="/carrito/finalizar-compra" element={<DateCompra/>} />
+            <Route index element={<Home />} />
+              <Route path="/:marca" element={<ItemListContainer />} />
 
-            
+              <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
+              
+              <Route path="/carrito" element={<Cart/>} />
 
-            <Route path="*" element={<Navigate to="/" />} />
+              <Route path="/carrito/finalizar-compra" element={<DateCompra/>} />
 
-            
-            
+              <Route path="*" element={<Navigate to="/" />} />
 
+            </Routes>
+          <Footer/>
 
-
-        </Routes>
-
-        <div className='flex justify-center items-center bg-blue-300 w-full h-36 mt-2'>
-                <Footer/>
-        </div>
-      </BrowserRouter>
-      
+        </BrowserRouter>
+        
+      </div>
     </div>
+
+
     </CartProvider>
     </>
   );

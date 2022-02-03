@@ -44,7 +44,7 @@ const ComparationContainer = () => {
         <div >
             
             <div>
-                <select onChange={clickHandler} className='w-full h-auto md:h-10 rounded'  name='select'>
+                <select onChange={clickHandler} className='w-full h-auto md:h-10 lg:h-12 lg:text-3xl  rounded border border-black shadow'  name='select'>
                     <option className='' >Selecciona tu telefono</option>
                     {phones.map(i=> (
                         <option  className='' id={i.id} value={i.value}>{i.title}</option>

@@ -1,22 +1,19 @@
 import React from 'react'
 import ComparationContainer from './ComparationContainer'
+import BannerSelect from './BannerSelect'
 
 
 
 const Home = () => {
     return (
         <>  
-            <div className='flex justify-center items-center bg-blue-300 w-full h-36 mt-2'>
-                    <h2>Aqui va un banner</h2>
+            <BannerSelect/>
+            <div className='flex justify-center items-center bg-green-50 w-full h-128 lg:h-150 mt-2'>
 
-            </div>
-
-            <div className='flex justify-center items-center bg-blue-300 w-full h-128 mt-2'>
-
-                <div className='flex justify-center items-center bg-green-400 h-full w-1/2'>
+                <div className='flex justify-center items-center border border-green-400 h-full w-1/2 mr-0.5'>
                     <ComparationContainer/> 
                 </div>
-                <div className='flex justify-center items-center bg-red-400 h-full w-1/2'>
+                <div className='flex justify-center items-center border border-green-400 h-full w-1/2 ml-0.5'>
                     <ComparationContainer/> 
                 </div>
             
