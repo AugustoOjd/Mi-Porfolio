@@ -10,7 +10,7 @@ const ItemDetail = ({product}) => {
         <>
         {/* {product.map(product=> */}
             <>
-                <div className='flex content-center w-full max-w-7xl'>
+                <div className='flex content-center w-full'>
                 
                 <div className='bg-blue-200 h-full w-1/2'>
                     <img src={product.img} alt={product.title} className='h-full w-full'></img>

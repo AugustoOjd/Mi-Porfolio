@@ -10,7 +10,7 @@ import Cart from './components/Cart'
 import { CartProvider } from '../src/context/CartContext';
 import DateCompra from './components/DateCompra'
 import Footer from './components/Footer'
-import BannerJoke from './components/BannerJoke';
+import BannerLogo from './components/BannerLogo';
 
 import {phones} from '../src/data/phones'
 import db from './firebase/firebase';
@@ -44,7 +44,7 @@ function App() {
           <NavBar/>
           {/* <button onClick={arrayUpload}>SUBIR COSAS</button> */}
 
-          <BannerJoke/>
+          <BannerLogo/>
           <Routes>
 
             <Route index element={<Home />} />

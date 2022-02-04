@@ -1,44 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import chuckNorris from '../assets/chuckNorris.jpg'
+import React from 'react';
 
 const BannerSelect = () => {
-
-    const [Joke, setJoke] = useState();
-
-    useEffect(() => {
-        const URL = 'https://api.chucknorris.io/jokes/random'
-        fetch(URL)
-            .then(res => res.json())
-            .then(data => setJoke(data.value))
-            .catch(err => console.log(err))
-            
-    }, []);
-    
-
-
     return (
+    
     <div>
-        <div className='flex justify-center items-center bg-green-300 w-full h-28 md:h-48 mt-2 p-1'>
-            
-            <div className='flex justify-between items-center bg-white w-full h-full rounded'>
-
-                <div className='w-24 h-24 md:w-40 md:h-40 '>
-                    <img src={chuckNorris} alt='chuckNorris aprueba' />
-                </div>
-
-                <div>
-                    <h2>{Joke}</h2>
-                </div>
-
-                <div>
-                    <h3>Selecciona tu celular</h3>
-                </div>
-                
-
-            </div>
-                
-
+        
+        <div className='flex justify-center items-center bg-green-300 dark:bg-gray-600 w-full h-12 md:h-20 lg:h-28 mt-1'>
+            <h2 className='text-sm md:text-lg lg:text-3xl font-bold dark:text-white'> Antes de comprar, puedes comparar nuestros productos</h2>
         </div>
+        
     </div>);
 };
 

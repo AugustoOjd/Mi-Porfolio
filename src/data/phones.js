@@ -106,7 +106,7 @@ export const phones = [
         bateria: 4000,
         camaraP: 108,
         camaraF: 32,
-        pantalla: 67,
+        pantalla: 6.7,
         precio: 109000,
         stock: 11,
     },
