@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import './App.css';
 
 import ItemDetailContainer from './components/ItemDetailContainer';
 import NavBar from './components/NavBar'
@@ -45,9 +44,10 @@ function App() {
           {/* <button onClick={arrayUpload}>SUBIR COSAS</button> */}
 
           <BannerLogo/>
+          
           <Routes>
 
-            <Route index element={<Home />} />
+              <Route path="/TechMobil_Augusto-Ojeda" index element={<Home/>} />
               <Route path="/:marca" element={<ItemListContainer />} />
 
               <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>
