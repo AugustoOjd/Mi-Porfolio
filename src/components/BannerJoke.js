@@ -26,11 +26,11 @@ const BannerSelect = () => {
                     <img src={chuckNorris} alt='chuckNorris aprueba' className='w-full h-full' />
                 </div>
 
-                <div className='max-w-lg text-sm md:text-md lg:text-xl  font-semibold'>
+                <div className='text-xs md:text-md lg:text-xl font-semibold mr-2'>
                     <h2>{Joke}</h2>
                 </div>
 
-                <div className='w-24 h-24 md:w-40 md:h-40'>
+                <div className='w-24 h-24 hidden sm:flex md:w-40 md:h-40'>
                     <img src={chuckNorris} alt='chuckNorris aprueba' className='w-full h-full' />
                 </div>
 

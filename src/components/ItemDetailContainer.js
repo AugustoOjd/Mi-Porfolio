@@ -29,27 +29,6 @@ const ItemDetailContainer = () => {
         setProduct({...querySnapshot.data(), id: querySnapshot.id})
     })
     .catch(e => console.log(e))
-        // setLoading(true)
-        // const getPhones = new Promise((res, rej)=>{
-        //     let uno = "1"
-        //     if(uno === "1"){
-        //         setTimeout(()=>{
-        //             res(phones)
-        //         }, )
-        //     }else{
-        //         rej("Hubo un error al cargar los productos")
-        //     }
-        // })
-
-        // getPhones
-        //     .then((item)=>{
-        //         if(itemId){
-        //             const myData = item.filter((e)=> e.id === parseInt(itemId))
-        //             setProduct(myData)
-        //         }else{
-        //             setProduct(item)
-        //         }
-        //     })
             .finally(()=> setLoading(false))
         
     }, [itemId])
@@ -57,7 +36,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <div className='flex content-center bg-green-300 dark:bg-gray-700 rounded shadow my-3 h-auto p-0.5 m-3 '>
+            <div className='flex content-center bg-green-300 dark:bg-gray-600 rounded shadow my-3 h-auto p-0.5 m-3'>
 
                 <div className='flex bg-white w-full h-full rounded shadow dark:bg-gray-100 p-1'>
                     

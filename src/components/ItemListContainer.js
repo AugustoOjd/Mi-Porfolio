@@ -40,26 +40,12 @@ const ItemListContainer = ({greeting}) => {
     
     setLoading(false)
 
-        // const getItems = new Promise ((res)=> {
-        //     setTimeout(() => {
-        //         const myData = marca ? phones.filter(m=> m.marca === marca) : phones;
-
-        //         res(myData)
-        //     },);
-        // })
-
-        // getItems
-        //     .then((res)=>{
-        //         setItems(res)
-        //     })
-        //     .finally(()=> setLoading(false))
-
 
     }, [marca])
 
     return  (
         <>
-            <div className='flex content-center bg-green-300 dark:bg-gray-700 rounded shadow my-3 h-96 md:h-128 p-0.5 m-3 max-w-7xl'>
+            <div className='flex content-center bg-green-300 dark:bg-gray-600 rounded shadow my-3 h-96 md:h-128 xl:h-150 p-0.5 m-3'>
 
                 <div className='flex bg-white w-full h-full rounded shadow dark:bg-gray-100 p-2 overflow-x-auto'>
                     <h3>{greeting}</h3>

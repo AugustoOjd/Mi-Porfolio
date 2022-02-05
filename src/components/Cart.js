@@ -34,12 +34,12 @@ const Cart = () => {
                         </div>
 
                         <div className='bg-white dark:bg-gray-100 w-1/2 h-full p-5'>
-                            <h2 className='text-lg md:text-3xl'>{`Modelo: ${l.title}`}</h2>
-                            <p className='text-lg md:text-3xl'>{`Cantidad: ${l.cantidad}`}</p>
-                            <p className='text-lg md:text-3xl'>{`Precio unidad: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(l.precio))} `}</p>
-                            <p className='text-lg md:text-3xl'>{`Precio total unidades: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(l.precio * l.cantidad))}`}</p>
+                            <h2 className='text-lg md:text-3xl lg:my-3 font-semibold'>{`Modelo: ${l.title}`}</h2>
+                            <p className='text-lg md:text-3xl lg:my-3 font-semibold'>{`Cantidad: ${l.cantidad}`}</p>
+                            <p className='text-lg md:text-3xl lg:my-3 font-semibold'>{`Precio unidad: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(l.precio))} `}</p>
+                            <p className='text-lg md:text-3xl lg:my-3 font-semibold'>{`Precio total unidades: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(l.precio * l.cantidad))}`}</p>
 
-                            <button onClick={()=> {remove(l.id)}} className='bg-red-300 text-lg md:text-3xl p-1 rounded mt-2 font-semibold'>Eliminar</button>
+                            <button onClick={()=> {remove(l.id)}} className='bg-red-300 text-lg md:text-3xl p-1 lg:p-3 rounded mt-2 font-semibold'>Eliminar</button>
                         </div>
                         
                     </div>
@@ -48,16 +48,16 @@ const Cart = () => {
                 
             )}
 
-                    <div className='flex justify-around items-center bg-gray-200 h-16 my-1'>
+                    <div className='flex justify-around items-center bg-gray-200 h-16 lg:h-28 my-1'>
                         <div className='bg-white w-1/3 h-full' >
-                            <h2 className='text-xs md:text-lg'>{`Precio Total: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(montoTotal))}`}</h2>
-                            <h3 className='text-sm md:text-lg'>{`Cantidad de productos: ${total === 0 ? "" : total}`}</h3>
+                            <h2 className='text-xs md:text-lg lg:text-2xl font-semibold'>{`Precio Total: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(montoTotal))}`}</h2>
+                            <h3 className='text-sm md:text-lg lg:text-2xl'>{`Cantidad de productos: ${total === 0 ? "" : total}`}</h3>
                         </div>
                         <div className='bg-white w-1/3 h-full' >
-                            <button onClick={clear} className='bg-red-300 w-full h-full rounded font-semibold lg:text-xl'> Clear list </button>
+                            <button onClick={clear} className='bg-red-300 w-full h-full rounded font-semibold text-lg lg:text-3xl'> Clear list </button>
                         </div>
                         <div className='bg-white w-1/3 h-full '>
-                            <div className='flex justify-center items-center bg-green-400 w-full h-full rounded font-semibold lg:text-xl'>
+                            <div className='flex justify-center items-center bg-green-400 w-full h-full rounded font-semibold text-lg lg:text-3xl'>
                             <Link to={"/carrito/finalizar-compra"} className=''> Terminar compra </Link> 
                             </div>
                             
@@ -70,9 +70,9 @@ const Cart = () => {
                 
                 :
 
-                <div className='flex justify-center items-center bg-blue-300 w-full h-96 mt-2'>
+                <div className='flex justify-center items-center  w-full h-80 mt-2'>
 
-                    <Link to={"/"} className='bg-blue-600 text-2xl p-3 rounded'>No hay productos agregados, volver a home</Link>
+                    <Link to={"/"} className='bg-blue-400 dark:bg-blue-600 dark:text-white lg:text-2xl xl:text-3xl p-2 lg:p-5 rounded shadow font-semibold'>No hay productos agregados, volver a home</Link>
 
                 </div>
                 
