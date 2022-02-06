@@ -1,6 +1,6 @@
 # Proyecto ecommerce techMobil de Augusto Ojeda
 
-Este es un ecommerce de celulares realizada como proyecto del curso react js de coderhouse
+Este es un ecommerce de celulares realizada como proyecto del curso react js de coderhouse, realizada por mi persona Augusto Ojeda.
 
 ## Cuenta con las siguientes secciones
 
@@ -11,14 +11,19 @@ Este es un ecommerce de celulares realizada como proyecto del curso react js de 
     * Footer (linkedin y CV)
 * Apple
     * Detalle del producto
+        * Agregar cantidad
 * Samsung
     * Detalle del producto
+        * Agregar cantidad
 * Motorola
     * Detalle del producto
+        * Agregar cantidad
 * Xiaomi
     * Detalle del producto
+        * Agregar cantidad
 * Cart 
     * Datos de compra
+        * Validacion de formulario
 * Tema claro/oscuro
 
 ## Los estilos fueron realizados con tailwind
@@ -28,6 +33,10 @@ Pagina de tailwind: [https://tailwindcss.com/](https://tailwindcss.com/)
 ## Se ultizo firebase como base de datos
 
 Pagina de firebase: [https://firebase.google.com/](https://firebase.google.com/)
+
+## La validacion de formulario
+
+La validacion del formulario de compra se realizo con la libreria formik [https://formik.org/](https://formik.org/)
 
 
 
