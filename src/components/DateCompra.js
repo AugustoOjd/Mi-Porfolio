@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { CartContext } from '../context/CartContext'
 import { collection, addDoc, getFirestore } from "firebase/firestore";
-import {Link, Navigate} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {Formik} from 'formik'
 
 
@@ -9,7 +9,7 @@ import {Formik} from 'formik'
 
 const DateCompra = () => {
 
-    const { cart, montoTotal } = useContext(CartContext)
+    const { cart, montoTotal, clear } = useContext(CartContext)
     const [Done, setDone] = useState(false);
 
     return( 
@@ -111,19 +111,21 @@ const DateCompra = () => {
 
                         { Done === false 
                         ? 
-                        <button type='submit' className='bg-blue-400 dark:bg-blue-600 p-2 rounded shadow text-lg xl:text-3xl'>Comprar</button>
+                        <button type='submit' onClick={clear} className='bg-blue-400 dark:bg-blue-600 p-2 rounded shadow text-lg xl:text-3xl'>Comprar</button>
+                        
                         : 
                         <Link to={"/"}>
-                            <button className='bg-indigo-400 dark:bg-indigo-800 p-2 rounded shadow text-lg xl:text-3xl text-white'>Gracias por tu compra, volver al inicio</button>
+                            <button className='bg-indigo-400 dark:bg-indigo-800 p-2 rounded shadow text-lg xl:text-3xl text-white'>Gracias por tu compra!! Volver al inicio</button>
                         </Link>  
                         }
-                    </form>
-                    <div>
+                        <div>
                         <h3 className='text-lg xl:text-3xl my-0.5'>{`Productos: ${cart.map(t=> t.title + `(${t.cantidad})` )}`}</h3>
                         <h3 className='text-lg xl:text-3xl my-0.5'>{`Precio total: ${(new Intl.NumberFormat("es-AR", {style: "currency", currency: "ARS"}).format(montoTotal))}`}</h3>
                         
                         
                     </div>
+                    </form>
+                    
                 </div>
                 </div>
                 
