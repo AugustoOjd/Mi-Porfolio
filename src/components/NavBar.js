@@ -47,7 +47,7 @@ const Navbar = () => {
     const Desplegar = ()=>{
         if(Down === false){
             setDown(marcas.map(m => (<MenuDespegable id={m.id} name={m.marca} icon={m.icon} marca={m.marca}/>))) 
-        }else{
+        }else {
             setDown(false)
         }
             
