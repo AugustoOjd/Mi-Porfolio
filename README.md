@@ -1,3 +1,36 @@
+# Proyecto ecommerce techMobil de Augusto Ojeda
+
+Este es un ecommerce de celulares realizada como proyecto del curso react js de coderhouse
+
+## Cuenta con las siguientes secciones
+
+* Home
+    * Logo
+    * Api de chucknorris joke
+    * Comparación de celulares
+    * Footer (linkedin y CV)
+* Apple
+    * Detalle del producto
+* Samsung
+    * Detalle del producto
+* Motorola
+    * Detalle del producto
+* Xiaomi
+    * Detalle del producto
+* Cart 
+    * Datos de compra
+* Tema claro/oscuro
+
+## Los estilos fueron realizados con tailwind
+
+Pagina de tailwind: [https://tailwindcss.com/](https://tailwindcss.com/)
+
+## Se ultizo firebase como base de datos
+
+Pagina de firebase: [https://firebase.google.com/](https://firebase.google.com/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

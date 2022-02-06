@@ -57,13 +57,14 @@ const Cart = () => {
                             <button onClick={clear} className='bg-red-300 w-full h-full rounded font-semibold text-lg lg:text-3xl'> Clear list </button>
                         </div>
                         <div className='bg-white w-1/3 h-full '>
-                            <div className='flex justify-center items-center bg-green-400 w-full h-full rounded font-semibold text-lg lg:text-3xl'>
-                            <Link to={"/carrito/finalizar-compra"} className=''> Terminar compra </Link> 
-                            </div>
+                            
+                            <Link to={"/carrito/finalizar-compra"}>
+                                <div className='flex justify-center items-center bg-green-400 w-full h-full rounded font-semibold text-lg lg:text-3xl'>
+                                    <button to={"/carrito/finalizar-compra"} className=''> Terminar compra </button> 
+                                </div>
+                            </Link>
                             
                         </div>
-                        
-                        
                         
                     </div>
             </>

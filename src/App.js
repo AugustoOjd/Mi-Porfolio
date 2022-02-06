@@ -48,6 +48,7 @@ function App() {
           <Routes>
 
               <Route path="/TechMobil_Augusto-Ojeda" index element={<Home/>} />
+              <Route index element={<Home/>} />
               <Route path="/:marca" element={<ItemListContainer />} />
 
               <Route path="/productos/:itemId" element={<ItemDetailContainer />}/>

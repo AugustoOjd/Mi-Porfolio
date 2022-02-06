@@ -9,7 +9,9 @@ const DateCompra = () => {
 
     const { cart, montoTotal } = useContext(CartContext)
 
-    const [ErrName, setErrName] = useState();
+    const [Errors, setErrors] = useState({
+        errName : ""
+    });
 
     const [Data, setData] = useState({
         nombre: "",
@@ -22,13 +24,13 @@ const DateCompra = () => {
         e.preventDefault()
 
         if(Data.nombre.length < 4 && Data.nombre.length > 10){
-            setErrName()
+            setErrors(Errors.errName = "nombre invalido")
         }
 
 
         const order ={
             buyer: {
-                name: Data.nombre,
+                name: (Data.nombre.length < 4 && Data.nombre.length > 10) ? Data.nombre : null,
                 lastName: Data.apellido,
                 phone: Data.numero,
                 email: Data.correo,
@@ -72,7 +74,7 @@ const DateCompra = () => {
 
             <div className='bg-green-300 dark:bg-gray-600 dark:text-white w-80 lg:w-96 xl:w-128 lg:h-96 xl:h-auto md:w-96 p-5 rounded shadow overflow-auto'>
                 <form className='flex flex-col'>
-                    <label className='text-lg xl:text-3xl'>Nombre: </label>
+                    <label className='text-lg xl:text-3xl'>Nombre: </label> <p>{Errors.errName}</p>
                     <input className='xl:h-10 xl:text-2xl my-1 text-black' onChange={(e)=>dateInput(e)} id='nombre' type="text" name="name" value={Data.nombre} placeholder='Nombre'></input>
                     <label className='text-lg xl:text-3xl'>Apellido: </label>
                     <input className='xl:h-10 xl:text-2xl my-1 text-black' onChange={(e)=>dateInput(e)} id='apellido' type="text" name="lastName" value={Data.apellido} placeholder='Apellido'></input>
