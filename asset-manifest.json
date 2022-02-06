@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/TechMobil_Augusto-Ojeda/static/css/main.13a5c1d7.chunk.css",
-    "main.js": "/TechMobil_Augusto-Ojeda/static/js/main.bc68a4af.chunk.js",
-    "main.js.map": "/TechMobil_Augusto-Ojeda/static/js/main.bc68a4af.chunk.js.map",
-    "runtime-main.js": "/TechMobil_Augusto-Ojeda/static/js/runtime-main.1a84672d.js",
-    "runtime-main.js.map": "/TechMobil_Augusto-Ojeda/static/js/runtime-main.1a84672d.js.map",
-    "static/js/2.7575a62b.chunk.js": "/TechMobil_Augusto-Ojeda/static/js/2.7575a62b.chunk.js",
-    "static/js/2.7575a62b.chunk.js.map": "/TechMobil_Augusto-Ojeda/static/js/2.7575a62b.chunk.js.map",
-    "static/js/3.437c8b3b.chunk.js": "/TechMobil_Augusto-Ojeda/static/js/3.437c8b3b.chunk.js",
-    "static/js/3.437c8b3b.chunk.js.map": "/TechMobil_Augusto-Ojeda/static/js/3.437c8b3b.chunk.js.map",
+    "main.css": "/TechMobil_Augusto-Ojeda/static/css/main.d6a29239.chunk.css",
+    "main.js": "/TechMobil_Augusto-Ojeda/static/js/main.95d59564.chunk.js",
+    "main.js.map": "/TechMobil_Augusto-Ojeda/static/js/main.95d59564.chunk.js.map",
+    "runtime-main.js": "/TechMobil_Augusto-Ojeda/static/js/runtime-main.f261564b.js",
+    "runtime-main.js.map": "/TechMobil_Augusto-Ojeda/static/js/runtime-main.f261564b.js.map",
+    "static/js/2.3e995495.chunk.js": "/TechMobil_Augusto-Ojeda/static/js/2.3e995495.chunk.js",
+    "static/js/2.3e995495.chunk.js.map": "/TechMobil_Augusto-Ojeda/static/js/2.3e995495.chunk.js.map",
+    "static/js/3.eef1dea6.chunk.js": "/TechMobil_Augusto-Ojeda/static/js/3.eef1dea6.chunk.js",
+    "static/js/3.eef1dea6.chunk.js.map": "/TechMobil_Augusto-Ojeda/static/js/3.eef1dea6.chunk.js.map",
     "index.html": "/TechMobil_Augusto-Ojeda/index.html",
-    "static/css/main.13a5c1d7.chunk.css.map": "/TechMobil_Augusto-Ojeda/static/css/main.13a5c1d7.chunk.css.map",
-    "static/js/2.7575a62b.chunk.js.LICENSE.txt": "/TechMobil_Augusto-Ojeda/static/js/2.7575a62b.chunk.js.LICENSE.txt",
+    "static/css/main.d6a29239.chunk.css.map": "/TechMobil_Augusto-Ojeda/static/css/main.d6a29239.chunk.css.map",
+    "static/js/2.3e995495.chunk.js.LICENSE.txt": "/TechMobil_Augusto-Ojeda/static/js/2.3e995495.chunk.js.LICENSE.txt",
     "static/media/a03s.5903d673.jpg": "/TechMobil_Augusto-Ojeda/static/media/a03s.5903d673.jpg",
     "static/media/a12.2d0d363d.jpg": "/TechMobil_Augusto-Ojeda/static/media/a12.2d0d363d.jpg",
     "static/media/a32.57713e8c.jpg": "/TechMobil_Augusto-Ojeda/static/media/a32.57713e8c.jpg",
@@ -31,9 +31,9 @@
     "static/media/zflip3.5e0a43ac.jpg": "/TechMobil_Augusto-Ojeda/static/media/zflip3.5e0a43ac.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a84672d.js",
-    "static/js/2.7575a62b.chunk.js",
-    "static/css/main.13a5c1d7.chunk.css",
-    "static/js/main.bc68a4af.chunk.js"
+    "static/js/runtime-main.f261564b.js",
+    "static/js/2.3e995495.chunk.js",
+    "static/css/main.d6a29239.chunk.css",
+    "static/js/main.95d59564.chunk.js"
   ]
 }
